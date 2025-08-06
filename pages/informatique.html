@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sciences - Ma Bibliothèque</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<script>
+    function rechercherLivre() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const cards = document.getElementsByClassName("book-card");
+
+        for (let i = 0; i < cards.length; i++) {
+            const cardText = cards[i].textContent.toLowerCase();
+            if (cardText.includes(filter)) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+<body>
+    <header>
+        <div class="logo-container">
+             <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="../images/logo.jpg" alt="Logo" style="height: 90px;" class="logo">
+            <h1>Bienvenue dans le temple du savoir des étudiants de Fouladou</h1>
+        </div>
+        </div>
+        <nav>
+            <h2>Amicale des Etudiants Ressortissant de Kolda à Thies</h2>
+             <h1>Partie litterature</h1>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="/pages/catalogues.html">Catalogue</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="retour-catalogue">
+        <a href="../pages/catalogues.html" class="btn-retour">← Retour à la banque des livres</a>
+    </div>
+
+
+    <main>
+
+    
+        <section class="catalogue">
+            <h2>Nos Livres de Litterature</h2>
+            <div class="search-bar">
+              <input type="text" id="searchInput" placeholder="Rechercher un livre..." onkeyup="rechercherLivre()">
+            </div>
+
+
+
+            <div class="book-grid">
+                <div class="book-card">
+                    <img src="../images/le sourire.jpg" alt="le sourire">
+                    <h3>Le Sourire</h3>
+                
+                    <p><strong>Auteur :</strong> Georges Dumas</p>
+                    <p><strong>Genre :</strong> communication</p>
+                    <p>Un guide pratique pour améliorer vos compétences en communication et en relations interpersonnelles.</p>
+                    <a href="../livres/le sourire.pdf" target="_blank" class="btn-lire">📖 le sourire</a>
+                    
+                </div>
+
+                <div class="book-card">
+                    <img src="../images/le sourire.jpg" alt="le sourire">
+                    <h3>Le Sourire</h3>
+                
+                    <p><strong>Auteur :</strong> Georges Dumas</p>
+                    <p><strong>Genre :</strong> communication</p>
+                    <p>Un guide pratique pour améliorer vos compétences en communication et en relations interpersonnelles.</p>
+                    <a href="../livres/le sourire.pdf" target="_blank" class="btn-lire">📖 le sourire</a>
+                    
+                </div>
+
+                <div class="book-card">
+                    <img src="../images/le sourire.jpg" alt="le sourire">
+                    <h3>Le Sourire</h3>
+                
+                    <p><strong>Auteur :</strong> Georges Dumas</p>
+                    <p><strong>Genre :</strong> communication</p>
+                    <p>Un guide pratique pour améliorer vos compétences en communication et en relations interpersonnelles.</p>
+                    <a href="../livres/le sourire.pdf" target="_blank" class="btn-lire">📖 le sourire</a>
+                    
+                </div>
+
+                
+
+                
+
+                
+
+               
+
+                <!-- Tu peux ajouter d'autres livres ici -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ma Bibliothèque - Tous droits réservés</p>
+        <p>Contact: <a href="mailto:amerk.thies@gmail.com">amerk.thies@gmail.com</a></p>
+         <p>Contact: <a href="tel:+221777587376">769476864 </a></p>
+        <p>Adresse: sapco, Thies, Sénégal</p>
+        <p>Suivez-nous sur nos réseaux sociaux</p>
+    </footer>
+</body>
+</html>

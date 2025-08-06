@@ -1,0 +1,340 @@
+/* Police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --main-color: #4a90e2;
+    --accent-color: #f5a623;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg: #fff;
+    --footer-bg: #333;
+    --footer-text: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+
+header h2 {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin-top: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+main h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.logo {
+    height: 50px;
+    border-radius: 8px; /* optionnel pour des bords arrondis */
+}
+
+
+.description {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.presidents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.president-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.president-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.president-card h3 {
+    color: var(--main-color);
+    margin: 10px 0 5px 0;
+}
+
+
+
+
+
+/* page de catalogue */
+
+.catalogue h2 {
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.book-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-link {
+    background-color: var(--main-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.category-link:hover {
+    background-color: var(--accent-color);
+}
+
+.retour-catalogue {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-retour {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-retour:hover {
+    background-color: var(--accent-color);
+}
+
+
+
+/* efectuer une recherche de livre */
+.search-bar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 12px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-lire {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-lire:hover {
+    background-color: var(--main-color);
+}
+
+
+
+.contact-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1.5px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--main-color);
+}
+
+.contact-info {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-left: 4px solid var(--main-color);
+    border-radius: 8px;
+}
+
+
+/* evenement */
+.evenement-annee {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.evenement {
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.evenement h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.evenement p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.images-evenement {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.images-evenement img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
